@@ -1,1 +1,1 @@
-proyecto paguinas web
+proyecto pagina web
