@@ -1,31 +1,20 @@
 <!DOCTYPE html>
-<HTml>
-    <body>
-
- <head>
-    <title>posicinamiento cajas</title>
 <html lang="es">
 <head>
     <title>Posicionamiento cajas</title>
     <meta charset="UTF-8">
     <style>
-        .caja1{
-            width:300px;
-            height:300px;
-            background-color: red
-         
-            .caja2{
+        main {
+            display: flex;       /* Activa Flexbox */
+            flex-wrap: wrap;    /* Permite que las cajas bajen a la siguiente línea si no caben */
+            gap: 10px;          /* Añade un espacio opcional entre las cajas */
+            padding: 20px;
+        }
         .caja1 {
             width: 300px;
             height: 300px;
             background-color: red;
         }
-            width:250px;
-            height:250px;
-            background-color: blue
-            </style>
-        
-
         .caja2 {
             width: 250px;
             height: 250px;
@@ -33,14 +22,11 @@
         }
     </style>
 </head>
-<header style.".background-color:gray; color:white; text-align:center; padding:10px;">
-    posicion de las cajas
 <body>
     <header style="background-color:gray; color:white; text-align:center; padding:10px;">
         Posición de las cajas
     </header>
 
-</header>
     <main>
         <div class="caja1">caja 1</div>
         <div class="caja2">caja 2</div>
@@ -48,24 +34,8 @@
         <div class="caja2">caja 4</div>
     </main>
 
-<MAIn>
-    <div class="caja1">caja 1</div>
-    <div class="caja2">caja 2</div>
-    <div class="caja1">caja 3</div>
-    <div class="caja2">caja 4</div>
-   
-        
-    </MAIn>
     <footer style="background-color:gray; color:white; text-align:center; padding:10px;">
-    esto funciona
         Esto funciona
     </footer>
-    </body>
-    </HTml>
-    
-
-
-
-
 </body>
 </html>

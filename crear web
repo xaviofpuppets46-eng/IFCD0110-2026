@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+  <html> <dir>="ltr" lang="es"lig
+
+      <head>
+         <title>Posicionamiento fix relative absoluto static </title>
+         <meta charset="UTF-8">
+         <style>
+          .caixallarga{
+            width: 111px;
+            height: 470px;
+            background-color: rgb(75, 224, 21);
+           }
+          .caixa{
+            width: 111px;
+            height: 47px;
+            background-color: brown;
+           }
+            .caixafija{
+              position: fixed;
+              top: 220px;
+              
+            }
+            
+            .caixaRelativa{
+              position: relative;
+              left: 200px;
+              top: 763px;
+
+             }
+              
+            .caixaAbsoluta{
+                position: absolute;
+               left: 220px; 
+               top: 450px;
+              width: 200px;  
+              height: 350px;
+                
+                
+             }
+              
+              .rodona{
+              position:absolute;
+              background-color: aquamarine;
+               height: 20px;
+               width: 20px; 
+               top: 20px; 
+               left: 20px;
+               border-radius: 45%;
+               
+
+            }
+    
+      </style>
+
+     </head>
+     <body>
+      <header>
+      <h1>
+          <span style="color: rgb(14, 191, 219);">sobre la propiedad position: relative i position: fixed 
+          </span>
+
+    
