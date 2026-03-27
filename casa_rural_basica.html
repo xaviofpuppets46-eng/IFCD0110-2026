@@ -24,7 +24,7 @@
             padding: 0.5rem;
         }
         nav a {
-            color: white;
+            color: rgb(211, 193, 193);
             margin: 0 15px;
             text-decoration: none;
             font-size: 0.9rem;
@@ -32,8 +32,8 @@
         .hero-image {
             width: 100%;
             height: 300px;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,0.3)), url('img/img\ moixeta.jpg');
-            background-size: cover;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,0.3)), url('img/mapa.ppm');
+            background-size: center;
             background-position: center;
             display: flex;
             align-items: center;
@@ -43,7 +43,7 @@
             max-width: 800px;
             margin: 2rem auto;
             padding: 0 20px;
-            background: white;
+            background: rgb(160, 155, 155);
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             border-radius: 8px;
             overflow: hidden;
@@ -52,8 +52,15 @@
             padding: 2rem;
             border-bottom: 1px solid #eee;
         }
-        section:last-child { border-bottom: none; }
-        h2 { color: #f17f7f; }
+        section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            color: #a3c7ab;
+            border-bottom: 2px solid #e2d9d9;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
         .servicios {
             display: flex;
             justify-content: space-between;
@@ -62,8 +69,8 @@
         }
         .servicio-item {
             flex: 1 1 150px;
-            background: #b9b0b0;
-            border: 10px solid #e2d9d9;
+            background: #fff;
+            border: 1px solid #ddd;
             padding: 1rem;
             border-radius: 10px;
             text-align: center;
@@ -79,7 +86,8 @@
             text-align: center;
             padding: 2rem;
             font-size: 0.8rem;
-            color: #099673;
+            color: #3d1414;
+            background: #d1cdcd;
         }
     </style>
 </head>
@@ -101,19 +109,15 @@
     <main class="container">
         <section id="inicio">
             <h2>Bienvenidos</h2>
-            <p>
+            <p>Descubre el encanto de nuestra masía. Ofrecemos diferentes espacios para tu comodidad:</p>
+            <ul>
+                <li><strong>Les Àligues:</strong> Apartamento con salón, chimenea, cocina y habitación dúplex. (6-8 personas).</li>
+                <li><strong>Les Orenetes:</strong> Tres habitaciones dobles con baño privado y vistas espectaculares.</li>
+                <li><strong>Spa & Sala Polivalente:</strong> 140m² con parquet, ideal para yoga, baile o retiros.</li>
+            </ul>
+            <p><small>📍 Crta. 2442 km entre Sant Jaume dels Domenys y Pla de Manlleu.</small></p>
 
-
-     Les Àligues: Apartamento que consta de una salón con chimenea, cocina, baño y una habitación de dos pisos. Ideal para grupos de seis a ocho personas
-     Les Orenetes: Tres habitaciones dobles recientemente restauradas conservando su carácter original. Todas disponen de baño, calefacción y buenas vistas.
-     Spa: Disponemos de una sala polivalente de 140 metros con suelo de parquet y excelentes vista. Ideal para grupos de yoga o baile o cualquier otro tipo de actividad.
-     crta 2442 km entre Sant Jaume del Domenys y Pla de Manlleu.</p>
-
-      
-
-
-
-        <img src="img/img moixeta.jpg" alt="Paisaje de la Moixeta" style="width:100%; border-radius:8px; margin-top:20px;">
+            <img src="img/img%20moixeta.jpg" alt="Paisaje de la Moixeta" style="width:100%; border-radius: 8px; margin-top: 8px;">
         </section>
 
         <section id="servicios">
@@ -122,21 +126,19 @@
                 <div class="servicio-item"><img src="img/ruter.webp" alt="WiFi">WiFi Gratis</div>
                 <div class="servicio-item"><img src="img/barrba.webp" alt="Barbacoa">Barbacoa</div>
                 <div class="servicio-item"><img src="img/gato.webp" alt="Mascotas">Mascotas OK</div>
-                
             </div>
         </section>
 
         <section id="contacto">
             <h2>Contacto</h2>
-            <p>📍 Calle paul casal 52</p>
-            <p>📞 +34 670 43 60 </p>
+            <p>📍 Calle Pau Casals, 52</p>
+            <p>📞 +34 670 436 000</p>
             <p>✉️ info@moixetalarural.cat</p>
         </section>
-     </main>
-     <footer>
-         
-         &copy; 2026 Moixeta la Rural - Turismo Rural
-      </footer>
+    </main>
 
-    </body>
-    </html>
+    <footer>
+        &copy; 2026 Moixeta la Rural - Turismo Rural
+    </footer>
+</body>
+</html>
