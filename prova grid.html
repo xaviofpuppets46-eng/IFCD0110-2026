@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Grid: Cómo funciona</title>
+    <meta charset="UTF-8">
+    <style>
+        .contenedor {
+            display: grid; /* Define el contenedor como una rejilla */
+            grid-template-columns: 1fr; /* Por defecto 1 columna para móvil */
+            grid-template-areas: 
+                "header"
+                "aside"
+                "main"
+                "footer";
+            gap: 15px;
+            min-height: 100vh;
+        }
+
+        @media (min-width: 768px) {
+            .contenedor {
+                /* En escritorio: menú a la izquierda (250px) y contenido a la derecha */
+                grid-template-columns: 250px 1fr; 
+                grid-template-areas: 
+                    "header header"
+                    "aside  main"
+                    "footer footer";
+            }
+        }
+
+        header { grid-area: header; }
+        aside { 
+            grid-area: aside; 
+            background-color: #000000; 
+            padding: 1rem; 
+            border-right: 1px solid #ccc;
+        }
+        main { 
+            grid-area: main; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Cajas internas de main */
+            gap: 10px; 
+            padding: 10px;
+        }
+        footer { grid-area: footer; }
+
+        /* Estilos para el menú */
+        aside nav ul {
+            list-style: none; /* Elimina los puntos de la lista */
+            padding: 0;
+            margin: 0;
+        }
+        aside nav li {
+            margin-bottom: 5px;
+        }
+        aside nav a {
+            display: block; /* Hace que el enlace ocupe todo el ancho del li */
+            padding: 8px 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none; /* Elimina el subrayado */
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        aside nav a:hover {
+            background-color: #0056b3;
+        }
+
+        .caja-item {
+            background-color: #000000;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        /* Estilos para header y footer */
+        header, footer, .contenedor > header, .contenedor > footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        </style>
+</head>
+<body class="contenedor">
+    <header>
+        <h1><B>VENTA DE CARNE A DOMICILIO </B></h1>
+    </header>
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <div class="caja-item">1</div>
+        <div class="caja-item">2</div>
+        <div class="caja-item">3</div>
+        <div class="caja-item">4</div>
+        <div class="caja-item">5</div>
+        <div class="caja-item">6</div>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
