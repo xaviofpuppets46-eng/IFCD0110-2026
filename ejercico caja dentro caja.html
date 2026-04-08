@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja dentro de caja</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Permite que las cajas pasen a la siguiente fila */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            gap: 200px; /* Espacio entre las cajas */
+            padding: 200px;
+        }
+
+        .outer-box {
+            display: flex;
+            flex-direction:row-reverse ; /* Stack text and inner box vertically */
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            height: 250px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 12px;
+            color: #333;
+            font-weight: bold;
+            gap: 15px; /* Modern way to add space between flex items */
+        }
+
+        .inner-box 1 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(231, 232, 233);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }   
+
+            .inner-box 2 {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(251, 253, 255);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+            
+            
+            
+            
+            
+            
+            
+
+
+            </style>
+</head>
+<body>
+    <div class="container">
+        <div class="outer-box">
+            <span>Caja Exterior</span>
+            <div class="inner-box">Interior</div>
+                </div>
+    </div>
+</body>
+</html>
+
+    

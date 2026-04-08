@@ -7,6 +7,7 @@
         .contenedor {
             display: grid; /* Define el contenedor como una rejilla */
             grid-template-columns: 1fr; /* Por defecto 1 columna para móvil */
+            background-color: PI;
             grid-template-areas: 
                 "header"
                 "aside"
@@ -18,11 +19,11 @@
 
         @media (min-width: 768px) {
             .contenedor {
-                /* En escritorio: menú a la izquierda (250px) y contenido a la derecha */
-                grid-template-columns: 250px 1fr; 
+                /* En escritorio: contenido a la izquierda y menú a la derecha (250px) */
+                grid-template-columns: 1fr 250px; 
                 grid-template-areas: 
                     "header header"
-                    "aside  main"
+                    "main aside"
                     "footer footer";
             }
         }
@@ -32,7 +33,7 @@
             grid-area: aside; 
             background-color: #e63617; 
             padding: 1rem; 
-            border-right: 1px solid #ccc;
+            border-left: 1px solid #ccc; /* Cambiado a la izquierda ya que ahora está a la derecha */
         }
         main { 
             grid-area: main; 
@@ -69,8 +70,20 @@
             background-color: #367a83;
             color: white;
             padding: 30px;
+            padding: 15px;
             text-align: center;
             border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .caja-item img {
+            width: 100%;
+            height: 150px; /* Altura fija para mantener uniformidad */
+            object-fit: cover; /* Corta la imagen para que rellene el espacio sin deformarse */
+            border-radius: 4px;
+            background-color: #ddd; /* Color de fondo por si la imagen falla */
         }
 
         /* Estilos para header y footer */
@@ -84,7 +97,8 @@
 </head>
 <body class="contenedor">
     <header>
-        <h1><B>VENTA DE CARNE A DOMICILIO </B></h1>
+        <h1><B>VENTA DE VEHICULOS DE OCASION  </B></h1>
+        
     </header>
     <aside>
         <nav>
@@ -97,12 +111,69 @@
         </nav>
     </aside>
     <main>
-        <div class="caja-item">1</div>
-        <div class="caja-item">2</div>
-        <div class="caja-item">3</div>
-        <div class="caja-item">4</div>
-        <div class="caja-item">5</div>
-        <div class="caja-item">6</div>
+       
+        <div class="caja-item">
+            <img src="img/imagenes de veihculos/defender.jpg" alt="defender Land Rover">
+            <span>Land Rover Defender
+           110 SW E (122 CV)
+          Etiqueta ambiental B
+          2013
+         130.774 Km
+         Diésel
+         Manual </span>
+        </div>
+        <div class="caja-item">
+            <img src="img/imagenes de veihculos/smart.webp" alt="Smart ForTwo">
+                           <span>Smart forfour
+S/S (90 CV)
+Etiqueta ambiental C
+2018
+63.888 Km
+Gasolina
+Automático</span>
+        </div>
+        <div class="caja-item">
+            <img src="img/imagenes de veihculos/1540557275003.jpeg" alt="Pollo de corral">
+            <span>JEEP - Wrangler 4p 2.0 380CV Rubicon 8ATX E6D</span>
+        </div>
+        <div class="caja-item">
+            <img src="img/imagenes de veihculos/AUDI A5.avif" alt="Costillas de cordero">
+            <span>AUDI - A5 S5 3.0 TFSI quattro tiptronic Cabrio
+5
+
+Precio al contado
+49.000 €
+IVA Incluido
+
+Villaviciosa de Odon (Madrid)</span>
+        </div>
+        <div class="caja-item">
+            <img src="img/imagenes de veihculos/citroen c6.webp" alt="Embutidos variados">
+            <span>CITROEN C6 2.2 HDi Exclusive
+Precio al contado
+5.490 €
+
+IVA incluido
+Sin garantía
+- Año
+
+- Mes
+</span>
+        </div>
+        <div class="caja-item">
+            <img src="img/imagenes de veihculos/toyota.webp" alt="Toyota Land Cruiser 3.0 D4D VX">
+            <span>TOYOTA - Land Cruiser 3.0 D4D VX 7 plazas
+            
+3
+
+Precio al contado
+25.990 €
+IVA Incluido
+
+Precio financiado
+24.990 €</span>
+            
+        </div>
     </main>
     <footer>
         

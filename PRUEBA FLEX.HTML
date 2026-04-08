@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo funciona Flexbox</title>
+    <style>
+        /* Contenedor Exterior (Flex Padre) */
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 300px;
+            background-color: #f0f0f0;
+            margin-top: 30px;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        /* Nuevo contenedor inline-flex para comparar */
+        .container-inline {
+            display: inline-flex;
+            background-color: #d1d1d1;
+            gap: 10px;
+            padding: 10px;
+            border: 2px dashed #333;
+        }
+
+        /* Contenedor Interior (Flex Hijo) */
+        .caixa {
+            display: flex;
+            flex-direction: column; /* Alinea su contenido en columna */
+            justify-content: center; 
+            align-items: center; 
+            width: 150px;
+            height: 150px;
+            background-color: rgb(109, 253, 73);
+            border-radius: 12px;
+            color: #333;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            border: 2px solid #555;
+        }
+
+        .caixa:hover {
+            background-color: steelblue;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de Flexbox</h1>
+    <h3>1. Contenedor con display: flex (ocupa todo el ancho)</h3>
+    <div class="container">
+        <div class="caixa">
+            <span>Caja 1</span>
+            <small>Interior Flex</small>
+        </div>
+        <div class="caixa">
+            <span>Caja 2</span>
+            <button style="margin-top: 10px;">Click</button>
+        </div>
+    </div>
+
+    <h3>2. Contenedores con display: inline-flex (se ponen uno al lado del otro)</h3>
+    <div class="container-inline">
+        <div style="background: lightblue; padding: 5px;">A</div>
+        <div style="background: lightblue; padding: 5px;">B</div>
+    </div>
+    
+    <span><-- Este texto está al lado del inline-flex --></span>
+
+    <div class="container-inline">
+        <div style="background: lightcoral; padding: 5px;">C</div>
+    </div>
+</body>
+</html>
+    
+       
